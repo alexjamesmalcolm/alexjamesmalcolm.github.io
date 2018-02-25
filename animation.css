@@ -1,0 +1,24 @@
+article.project div.front {
+	transform: rotateY(0deg);
+	transition-property: transform;
+	transition-duration: 2s;
+
+}
+
+article.project div.back {
+	transform: rotateY(180deg);
+	transition-property: transform;
+	transition-duration: 2s;
+}
+
+article.project:hover div.front {
+	transform: rotateY(180deg);
+}
+
+article.project:hover div.back {
+	transform: rotateY(0deg);
+}
+
+article.project > * {
+	backface-visibility: hidden;
+}

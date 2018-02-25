@@ -28,8 +28,12 @@ footer {
 }
 
 article {
+}
+
+article > * {
 	background-color: #A05656;
 	border-radius: var(--radius);
+	box-shadow: 12px 12px 42px -10px grey;
 }
 
 article img {

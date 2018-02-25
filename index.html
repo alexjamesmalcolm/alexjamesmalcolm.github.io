@@ -4,7 +4,9 @@
 	<title>Alex Malcolm's website</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="layout.css">
-	<script type="text/javascript" src="svg.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="animation.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -35,17 +37,22 @@
 			</h2>
 			<div class="projects">
 				<article class="project">
-					<img src="https://www.petmd.com/sites/default/files/petmd-cat-happy-10.jpg" />
-					<h3>
-						<a href="">
-							Review site
-						</a>
-					</h3>
-					<ul>
-						<li>Java</li>
-						<li>HTML5</li>
-						<li>CSS</li>
-					</ul>
+					<div class="front">
+						<img src="https://www.petmd.com/sites/default/files/petmd-cat-happy-10.jpg" />
+						<h3>
+							<a href="">
+								Review site
+							</a>
+						</h3>
+						<ul class="tags">
+							<li>Java</li>
+							<li>HTML5</li>
+							<li>CSS</li>
+						</ul>
+					</div>
+					<div class="back">
+						<p>Hello this is a description of a project</p>
+					</div>
 				</article>
 				<article class="project">
 					<img src="https://www.petmd.com/sites/default/files/petmd-cat-happy-10.jpg" />
@@ -111,9 +118,5 @@
 			</small>
 		</footer>
 	</div>
-	<div id="background"></div>
-	<script type="text/javascript" src="background.js"></script>
-	<!-- <canvas id="canvas" width="1000" height="1000"></canvas> -->
-	<!-- <script type="text/javascript" src="canvas.js"></script> -->
 </body>
 </html>

@@ -41,11 +41,20 @@ div.projects {
     grid-gap: 3rem;
 }
 
-article.project {
+article.project div.front {
 	display: flex;
 	flex-direction: column;
 	flex-basis: 12rem;
 	margin: auto;
+}
+
+article.project {
+	/*position: relative;*/
+}
+
+article.project > * {
+	/*position: absolute;*/
+	/*width: 100px;*/
 }
 
 article.project img {
@@ -54,6 +63,10 @@ article.project img {
 
 article.project h3 {
 	text-align: center;
+}
+
+.project .back {
+	position: absolute;
 }
 
 footer {
