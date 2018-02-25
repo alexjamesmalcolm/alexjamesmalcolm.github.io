@@ -1,14 +1,15 @@
 article.project div.front {
 	transform: rotateY(0deg);
-	transition-property: transform;
-	transition-duration: 2s;
-
 }
 
 article.project div.back {
 	transform: rotateY(180deg);
+}
+
+article.project div.side {
 	transition-property: transform;
 	transition-duration: 2s;
+	transition-timing-function: ease-in-out;
 }
 
 article.project:hover div.front {
