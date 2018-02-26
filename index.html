@@ -2,9 +2,9 @@
 <html>
 <head>
 	<title>Alex Malcolm's website</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" type="text/css" href="layout.css">
-	<link rel="stylesheet" type="text/css" href="animation.css">
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<link rel="stylesheet" type="text/css" href="layout.css"/>
+	<link rel="stylesheet" type="text/css" href="animation.css"/>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" src="script.js"></script>
 </head>
@@ -15,14 +15,22 @@
 				Alex Malcolm
 			</h1>
 			<nav>
-				<a href="#about-me">About Me</a>
-				<a href="#projects">Projects</a>
+				<h2>
+					<a href="#about-me">About Me</a>
+				</h2>
+				<h2>
+					<a href="#projects">Projects</a>
+				</h2>
+				<h2>
+					<a href="#contact">Contact</a>
+				</h2>
 			</nav>
 		</header>
 		<section id="about-me" >
 			<h2>
 				About Me
 			</h2>
+			<img src="" />
 			<p>
 				brief biographical information
 				photo
@@ -54,19 +62,21 @@
 							</a>
 						</h3>
 						<p>Hello this is a description of a project</p>
-						<ul class="tags">
-							<li class="tag">Java</li>
-							<li class="tag">HTML5</li>
-							<li class="tag">Eclipse</li>
-							<li class="tag">Spring</li>
-							<li class="tag">Test-Driven Development</li>
-							<li class="tag">JUnit</li>
-						</ul>
+						<div class="tags">
+							<ul class="tags">
+								<li class="tag">Java</li>
+								<li class="tag">HTML5</li>
+								<li class="tag">Eclipse</li>
+								<li class="tag">Spring</li>
+								<li class="tag">Test-Driven Development</li>
+								<li class="tag">JUnit</li>
+							</ul>
+						</div>
 					</div>
 				</article>
 				<article class="project">
 					<div class="front side">
-						<img src="https://www.petmd.com/sites/default/files/petmd-cat-happy-10.jpg" />
+						<img src="./resources/virtual-pets.svg" />
 						<h3>
 							<a href="">
 								Virtual Pet Spring
@@ -82,43 +92,102 @@
 						<p>
 							A virtual pet shelter housing robotic and organic cats and dogs utilizing the Java Spring stack running in an embedded Tomcat server.
 						</p>
-						<ul class="tags">
-							<li class="tag">Java</li>
-							<li class="tag">HTML5</li>
-							<li class="tag">Eclipse</li>
-							<li class="tag">Spring</li>
-							<li class="tag">Test-Driven Development</li>
-							<li class="tag">JUnit</li>
-						</ul>
-					</article>
-					<article class="project">
-						<div class="front side">
-							<img src="https://www.petmd.com/sites/default/files/petmd-cat-happy-10.jpg" />
-							<h3>
-								<a href="">
-									Bank Teller
-								</a>
-							</h3>
+						<div class="tags">
+							<ul class="tags">
+								<li class="tag">Java</li>
+								<li class="tag">HTML5</li>
+								<li class="tag">Eclipse</li>
+								<li class="tag">Spring</li>
+								<li class="tag">Test-Driven Development</li>
+								<li class="tag">JUnit</li>
+							</ul>
 						</div>
-						<div class="back side">
-							<h3>
-								<a href="">
-									Bank Teller
-								</a>
-							</h3>
-							<p>Bank Teller</p>
+					</div>
+				</article>
+				<article class="project">
+					<div class="front side">
+						<img src="https://www.petmd.com/sites/default/files/petmd-cat-happy-10.jpg" />
+						<h3>
+							<a href="">
+								Bank Teller
+							</a>
+						</h3>
+					</div>
+					<div class="back side">
+						<h3>
+							<a href="">
+								Bank Teller
+							</a>
+						</h3>
+						<p>
+							What? 
+							Who?
+							When?
+							How?
+							Why?
+							Where?
+						</p>
+						<div class="tags">
+							<ul class="tags">
+								<li class="tag">Java</li>
+								<li class="tag">Eclipse</li>
+								<li class="tag">JUnit</li>
+								<li class="tag">Test-Driven Development</li>
+							</ul>
+						</div>
+					</div>
+				</article>
+				<article class="project">
+					<div class="front side">
+						<img src="https://www.petmd.com/sites/default/files/petmd-cat-happy-10.jpg" />
+						<h3>
+							<a href="">
+								Fortune Teller
+							</a>
+						</h3>
+					</div>
+					<div class="back side">
+						<h3>
+							<a href="">
+								Fortune Teller
+							</a>
+						</h3>
+						<p>
+							What? 
+							Who?
+							When?
+							How?
+							Why?
+							Where?
+						</p>
+						<div class="tags">
 							<ul class="tags">
 								<li class="tag">Java</li>
 								<li class="tag">Eclipse</li>
 							</ul>
-						</article>
+						</div>
 					</div>
-				</section>
-				<footer>
-					<small>
-						Website by Alexander Malcolm
-					</small>
-				</footer>
+				</article>
 			</div>
-		</body>
-		</html>
+		</section>
+		<section id="contact">
+			<h2>
+				Contact Me
+			</h2>
+			<a href="https://www.linkedin.com/in/alexjamesmalcolm/">
+				<img class="icon" src="./resources/linkedin.svg" />
+				LinkedIn
+			</a>
+			<a href="https://github.com/alexjamesmalcolm">
+				<img class="icon" src="./resources/github.svg" />
+				GitHub
+			</a>
+		</section>
+		<footer>
+			<small>
+				Website by Alexander Malcolm
+			</small>
+		</footer>
+	</div>
+</body>
+</html>
