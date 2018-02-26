@@ -24,7 +24,7 @@ header nav {
 	justify-content:space-between;
 }
 
-header nav a {
+header nav h2 {
 	margin:0 1rem;
 }
 
@@ -70,8 +70,8 @@ article.project div.back ul.tags {
 article.project div.back {
 	position:absolute;
 	top:0;
-	width:calc(100%-2*var(--back-side-padding));
-	height:calc(100%-2*var(--back-side-padding));
+	width:calc(100% - 2 * var(--back-side-padding));
+	height:calc(100% - 2 * var(--back-side-padding));
 	padding:var(--back-side-padding);
 }
 
@@ -103,4 +103,9 @@ div#background {
 div.tags {
 	position:absolute;
 	bottom:var(--back-side-padding);
+}
+
+img.headshot {
+	display: inline;
+	width: 10rem;
 }

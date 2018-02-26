@@ -27,6 +27,28 @@ a {
 	text-decoration:none;
 }
 
+nav h2 {
+	padding: 0rem 0.4rem;
+	border-radius: 0.6rem;
+	background-color: #AAAAAA;
+	transition-property: background-color;
+	transition-duration: 0.4s;
+}
+
+nav h2:hover {
+	background-color: #000000;
+}
+
+nav h2 a {
+	color: black;
+	transition-property: color;
+	transition-duration: 0.4s;
+}
+
+nav h2:hover a {
+	color: white;
+}
+
 .tag {
 	background-color:rgba(8,92,170,0.5);
 	border-radius:3px;
