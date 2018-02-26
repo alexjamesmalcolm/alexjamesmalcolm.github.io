@@ -4,7 +4,6 @@
 }
 
 .container {
-	/*display: none;*/
 	display: grid;
 	grid-template-rows: 5rem auto auto 3rem;
 }
@@ -35,10 +34,19 @@ section#projects {
 
 div.projects {
 	display: grid;
-    align-self: center;
-    width: 75%;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 3rem;
+	align-self: center;
+	width: 75%;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 3rem;
+}
+
+article.project {
+	position: relative;
+}
+
+article.project div.side {
+	width: 100%;
+	height: 100%;
 }
 
 article.project div.front {
@@ -48,13 +56,9 @@ article.project div.front {
 	margin: auto;
 }
 
-article.project {
-	/*position: relative;*/
-}
-
-article.project > * {
-	/*position: absolute;*/
-	/*width: 100px;*/
+article.project div.back {
+	position: absolute;
+	top: 0;
 }
 
 article.project img {
@@ -63,10 +67,6 @@ article.project img {
 
 article.project h3 {
 	text-align: center;
-}
-
-.project .back {
-	position: absolute;
 }
 
 footer {

@@ -28,16 +28,18 @@ footer {
 }
 
 article {
+	background-image: url("./resources/steel-background.jpg");
+	background-size: 100%;
+	border-radius: var(--radius);
 }
 
 article > * {
-	background-color: #A05656;
-	border-radius: var(--radius);
-	box-shadow: 12px 12px 42px -10px grey;
-}
-
-.back {
-	background-color: #A05656;
+	background-color: white;
+	/*
+	border-width: 5px;
+	border-style: solid;
+	border-color: rgba(0, 0, 0, 0.5);
+	*/
 	border-radius: var(--radius);
 	box-shadow: 12px 12px 42px -10px grey;
 }
