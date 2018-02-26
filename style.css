@@ -67,3 +67,11 @@ img.icon {
 #projects,footer {
 	background-color:#FFF;
 }
+
+div.side h3 a:link {
+	color: #000000;
+}
+
+div.side h3 a:visited {
+	color: #5C3B5B;
+}
