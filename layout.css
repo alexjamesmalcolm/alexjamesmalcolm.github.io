@@ -139,3 +139,19 @@ section#about-me div.contents > * {
 section#projects h2 {
 	margin-bottom: 2rem;
 }
+
+section#contact {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+section#contact div.content {
+	display: flex;
+}
+
+section#contact div.content > * {
+	display: block;
+	margin: 1rem;
+}
