@@ -1,3 +1,7 @@
+:root {
+	--back-side-padding: 5px;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -56,9 +60,21 @@ article.project div.front {
 	margin: auto;
 }
 
+article.project div.back ul.tags {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.tag {
+	margin: 0.2rem 0.3rem;
+}
+
 article.project div.back {
 	position: absolute;
 	top: 0;
+	padding: var(--back-side-padding);
+	width: calc(100% - 2 * var(--back-side-padding));
+	height: calc(100% - 2 * var(--back-side-padding));;
 }
 
 article.project img {
@@ -67,6 +83,7 @@ article.project img {
 
 article.project h3 {
 	text-align: center;
+	margin: 0.5rem 0rem;
 }
 
 footer {
