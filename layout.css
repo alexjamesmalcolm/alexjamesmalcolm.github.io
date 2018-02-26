@@ -10,7 +10,7 @@
 .container {
 	display:grid;
 	grid-template-rows:5rem repeat(3,auto) 3rem;
-	grid-gap:1rem;
+	grid-gap:1.8rem;
 }
 
 header {
@@ -31,6 +31,7 @@ header nav h2 {
 section#projects {
 	display:flex;
 	flex-direction:column;
+	align-items: center;
 }
 
 div.projects {
@@ -108,4 +109,33 @@ div.tags {
 img.headshot {
 	display: inline;
 	width: 10rem;
+	border-radius: 50%;
+	box-shadow: 9px 5px 32px 0px grey;
+	height: 100%;
+}
+
+section#about-me {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+section#about-me h2 {
+	margin-bottom: 1rem;
+}
+
+section#about-me div.contents {
+	display: flex;
+	width: 50%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+section#about-me div.contents > * {
+	margin: 0px 1rem;
+}
+
+section#projects h2 {
+	margin-bottom: 2rem;
 }

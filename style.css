@@ -3,8 +3,12 @@
 }
 
 * {
-	font-family:sans-serif;
+	font-family: Arial, sans-serif;
 	list-style-type:none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Georgia, serif;
 }
 
 article.project {
@@ -30,7 +34,7 @@ a {
 nav h2 {
 	padding: 0rem 0.4rem;
 	border-radius: 0.6rem;
-	background-color: #AAAAAA;
+	background-color: #DCDCDC;
 	transition-property: background-color;
 	transition-duration: 0.4s;
 }
