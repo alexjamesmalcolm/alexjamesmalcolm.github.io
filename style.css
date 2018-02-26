@@ -34,7 +34,7 @@ a {
 nav h2 {
 	padding: 0rem 0.4rem;
 	border-radius: 1rem;
-	border: 1.4px solid black;
+	border: 2px solid black;
 	transition-property: background-color;
 	transition-duration: 0.4s;
 }
