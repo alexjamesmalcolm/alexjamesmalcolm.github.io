@@ -13,7 +13,8 @@ h1, h2, h3, h4, h5, h6 {
 
 article.project {
 	background-image:url(./resources/steel-background.jpg);
-	background-size:100%;
+	background-size:100% 100%;
+	/*transform: rotateZ(180deg);*/
 	border-radius:var(--radius);
 }
 
@@ -74,4 +75,8 @@ div.side h3 a:link {
 
 div.side h3 a:visited {
 	color: #5C3B5B;
+}
+
+div.side h3 a:active {
+	color: #979797;
 }
