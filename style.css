@@ -1,5 +1,6 @@
 :root {
 	--radius:.5rem;
+	--transition-duration: 0.2s;
 }
 
 * {
@@ -14,7 +15,6 @@ h1, h2, h3, h4, h5, h6 {
 article.project {
 	background-image:url(./resources/steel-background.jpg);
 	background-size:100% 100%;
-	/*transform: rotateZ(180deg);*/
 	border-radius:var(--radius);
 }
 
@@ -37,7 +37,7 @@ nav h2 {
 	border-radius: 1rem;
 	border: 1px solid black;
 	transition-property: background-color;
-	transition-duration: 0.4s;
+	transition-duration: var(--transition-duration);
 }
 
 nav h2:hover {
@@ -47,7 +47,7 @@ nav h2:hover {
 nav h2 a {
 	color: black;
 	transition-property: color;
-	transition-duration: 0.4s;
+	transition-duration: var(--transition-duration);
 }
 
 nav h2:hover a {
