@@ -1,3 +1,7 @@
+article.project {
+	perspective: 100vw;
+}
+
 article.project div.front {
 	transform: rotateY(0deg);
 }
@@ -13,7 +17,7 @@ article.project div.side {
 }
 
 article.project:hover div.front {
-	transform: rotateY(180deg);
+	transform: rotateY(-180deg);
 }
 
 article.project:hover div.back {
