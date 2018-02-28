@@ -16,6 +16,7 @@ article.project {
 	background-image:url(./resources/steel-background.jpg);
 	background-size:100% 100%;
 	border-radius:var(--radius);
+	box-shadow: inset 20px 20px 20px 0px rgba(0, 0, 0, 0.5);
 }
 
 article > * {
@@ -32,7 +33,7 @@ a {
 	text-decoration:none;
 }
 
-nav h2 {
+nav ul li {
 	padding: 0rem 0.4rem;
 	border-radius: 1rem;
 	border: 1px solid black;
@@ -40,17 +41,17 @@ nav h2 {
 	transition-duration: var(--transition-duration);
 }
 
-nav h2:hover {
+nav ul li:hover {
 	background-color: #000000;
 }
 
-nav h2 a {
+nav ul li a {
 	color: black;
 	transition-property: color;
 	transition-duration: var(--transition-duration);
 }
 
-nav h2:hover a {
+nav ul li:hover a {
 	color: white;
 }
 
