@@ -80,7 +80,7 @@ article.project div.back {
 article.project img {
 	width:100%;
 	max-height:16rem;
-	object-fit:scale-down;
+	object-fit:fill;
 }
 
 article.project h3 {
