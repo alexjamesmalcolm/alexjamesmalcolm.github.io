@@ -73,41 +73,5 @@ describe("alexjamesmalcolm.github.io", () => {
 			toggleMenu();
 			expect(nav.classList.contains("active")).toEqual(false);
 		});
-		// it("toggleMenu should make the nav visibility:visible when it's already invisible", () => {
-		// 	toggleMenu();
-		// 	expect(getVisibilityStyle(nav)).toEqual("visible");
-		// });
-		// it("toggleMenu should make the nav visibility:hidden when it's already visible", () => {
-		// 	toggleMenu();
-		// 	toggleMenu();
-		// 	expect(getVisibilityStyle(nav)).toEqual("hidden");
-		// });
-		// it("toggleMenu should make the nav opacity:1 when it's already invisible", () => {
-		// 	toggleMenu();
-		// 	expect(getOpacityStyle(nav)).toEqual("1");
-		// });
-		// it("toggleMenu should make the nav opacity:0 when it's already visible", () => {
-		// 	toggleMenu();
-		// 	toggleMenu();
-		// 	expect(getOpacityStyle(nav)).toEqual("0");
-		// });
-		// it("toggleMenu should set transformation to none if already invisible", () => {
-		// 	toggleMenu();
-		// 	expect(getTransformStyle(nav)).toEqual("none");
-		// });
-		// it("toggleMenu should return translation to -100px if already visible", () => {
-		// 	toggleMenu();
-		// 	toggleMenu();
-		// 	expect(getTransformStyle(nav)).toEqual("matrix(1, 0, 0, 1, 0, -100)");
-		// });
-		// it("toggleMenu should rotate button when turned on", () => {
-		// 	toggleMenu();
-		// 	expect(getTransformStyle(button)).toEqual("matrix(0, 0.9, -0.9, 0, 0, 0)");
-		// });
-		// it("toggleMenu should rotate button back when turned off", () => {
-		// 	toggleMenu();
-		// 	toggleMenu();
-		// 	expect(getTransformStyle(button)).toEqual("matrix(0.9, 0, 0, 0.9, 0, 0)");
-		// });
 	});
 });
