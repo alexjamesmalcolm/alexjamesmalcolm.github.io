@@ -16,31 +16,31 @@
 header {
 	display:flex;
 	justify-content:space-around;
-	align-items:center;
+	align-items: center;
 }
 
 header nav ul {
-	display:flex;
-	justify-content:space-between;
+	display: flex;
+	justify-content: space-between;
 	font-size: 1.3em;
 }
 
 header nav ul li {
-	margin:0 1rem;
+	margin: 0 1rem;
 }
 
 section#projects {
-	display:flex;
-	flex-direction:column;
+	display: flex;
+	flex-direction: column;
 	align-items: center;
 }
 
 div.projects {
-	display:grid;
-	align-self:center;
-	width:75%;
-	grid-template-columns:repeat(3,1fr);
-	grid-gap:3rem;
+	display: grid;
+	align-self: center;
+	width: 86%;
+	grid-template-columns: repeat(3,1fr);
+	grid-gap: 3rem;
 }
 
 article.project {
@@ -155,4 +155,74 @@ section#contact div.content {
 section#contact div.content > * {
 	display: block;
 	margin: 1rem;
+}
+
+@media screen and (max-width: 1060px){
+	section#projects div.projects {
+		grid-template-columns: repeat(2, 1fr);
+		width: 75%;
+	}
+}
+
+@media screen and (max-width: 950px){
+	section#about-me div.contents {
+		flex-direction: column;
+		width: 90%;
+	}
+
+	section#about-me div.contents p {
+		margin-top: 1.5rem;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	div.projects {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	div.projects article.project {
+		width: 100%;
+		margin: 3rem 0;	
+	}
+
+	section#about-me div.contents > * {
+		margin: 0;
+	}
+}
+
+@media screen and (max-width: 600px){
+	header {
+		flex-direction: column;
+	}
+
+	div.projects {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 425px){
+	header nav {
+		display: none;
+	}
+
+	section#about-me div.contents img.headshot {
+		width: 100%;
+		border-radius: 3%;
+	}
+}
+
+@media screen and (max-width: 320px){
+	span.unimportant {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 240px){
+	header h1 {
+		width: min-content;
+		text-align: center;
+	}
 }
