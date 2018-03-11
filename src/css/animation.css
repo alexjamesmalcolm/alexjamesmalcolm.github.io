@@ -1,3 +1,7 @@
+header nav {
+	transition-duration: 0.4s;
+}
+
 article.project {
 	perspective: 100vw;
 }

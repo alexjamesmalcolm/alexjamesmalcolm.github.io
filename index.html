@@ -6,16 +6,18 @@
 	<link rel="stylesheet" type="text/css" href="src/css/style.css"/>
 	<link rel="stylesheet" type="text/css" href="src/css/layout.css"/>
 	<link rel="stylesheet" type="text/css" href="src/css/animation.css"/>
-	<link rel="shortcut icon" href="./resources/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="./resources/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="./src/images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="./src/images/favicon.ico" type="image/x-icon">
 </head>
-<body>
+<body onload="initialize()">
 	<div class="container">
 		<header>
 			<h1>
 				Alex Malcolm
 			</h1>
-			<button>Menu</button>
+			<button>
+				<img src="./src/images/hamburger.svg"/>
+			</button>
 			<nav>
 				<ul>
 					<li>
@@ -211,5 +213,6 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdn.rawgit.com/tuupola/jquery_lazyload/07d121f8dfa7c83c8a2bb0767f5c77eaf60be54e/lazyload.js"></script>
 	<script type="text/javascript" src="./src/js/lazyloadxt.js"></script>
+	<script type="text/javascript" src="./src/js/app.js"></script>
 </body>
 </html>
