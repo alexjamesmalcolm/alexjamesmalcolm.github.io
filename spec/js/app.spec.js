@@ -11,6 +11,10 @@ describe("alexjamesmalcolm.github.io", () => {
 				opacity: 0;
 				transform: translateX(-100px);
 			}
+
+			button {
+				transform: matrix(0.9, 0, 0, 0.9, 0, 0);
+			}
 		</style>
 		<header>
 			<button></button>
@@ -77,6 +81,15 @@ describe("alexjamesmalcolm.github.io", () => {
 		it("toggleMenu should be called when the button in the header is clicked", () => {
 			button.click();
 			expect(toggleMenuSpy).toHaveBeenCalled();
+		});
+		it("toggleMenu should rotate button when turned on", () => {
+			toggleMenu();
+			expect(getTransformStyle(button)).toEqual("matrix(0, 0.9, -0.9, 0, 0, 0)");
+		});
+		it("toggleMenu should rotate button back when turned off", () => {
+			toggleMenu();
+			toggleMenu();
+			expect(getTransformStyle(button)).toEqual("matrix(0.9, 0, 0, 0.9, 0, 0)");
 		});
 	});
 });
