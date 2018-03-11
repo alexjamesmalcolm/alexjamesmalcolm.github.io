@@ -251,10 +251,3 @@ section#contact div.content > * {
 		display: none;
 	}
 }
-
-@media screen and (max-width: 270px){
-	header h1 {
-		width: min-content;
-		text-align: center;
-	}
-}
