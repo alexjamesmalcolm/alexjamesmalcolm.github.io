@@ -51,45 +51,63 @@ describe("alexjamesmalcolm.github.io", () => {
 			nav = container.querySelector("nav");
 			toggleMenuSpy = spyOn(window, "toggleMenu").and.callThrough();
 		});
-		it("toggleMenu should make the nav visibility:visible when it's already invisible", () => {
-			toggleMenu();
-			expect(getVisibilityStyle(nav)).toEqual("visible");
-		});
-		it("toggleMenu should make the nav visibility:hidden when it's already visible", () => {
-			toggleMenu();
-			toggleMenu();
-			expect(getVisibilityStyle(nav)).toEqual("hidden");
-		});
-		it("toggleMenu should make the nav opacity:1 when it's already invisible", () => {
-			toggleMenu();
-			expect(getOpacityStyle(nav)).toEqual("1");
-		});
-		it("toggleMenu should make the nav opacity:0 when it's already visible", () => {
-			toggleMenu();
-			toggleMenu();
-			expect(getOpacityStyle(nav)).toEqual("0");
-		});
-		it("toggleMenu should set transformation to none if already invisible", () => {
-			toggleMenu();
-			expect(getTransformStyle(nav)).toEqual("none");
-		});
-		it("toggleMenu should return translation to -100px if already visible", () => {
-			toggleMenu();
-			toggleMenu();
-			expect(getTransformStyle(nav)).toEqual("matrix(1, 0, 0, 1, 0, -100)");
-		});
 		it("toggleMenu should be called when the button in the header is clicked", () => {
 			button.click();
 			expect(toggleMenuSpy).toHaveBeenCalled();
 		});
-		it("toggleMenu should rotate button when turned on", () => {
+		it("toggleMenu should give button active class when first turned on", () => {
 			toggleMenu();
-			expect(getTransformStyle(button)).toEqual("matrix(0, 0.9, -0.9, 0, 0, 0)");
+			expect(button.classList.contains("active")).toEqual(true);
 		});
-		it("toggleMenu should rotate button back when turned off", () => {
+		it("toggleMenu should give nav active class when first turned on", () => {
 			toggleMenu();
-			toggleMenu();
-			expect(getTransformStyle(button)).toEqual("matrix(0.9, 0, 0, 0.9, 0, 0)");
+			expect(nav.classList.contains("active")).toEqual(true);
 		});
+		it("toggleMenu should remove button active class when turned off", () => {
+			toggleMenu();
+			toggleMenu();
+			expect(button.classList.contains("active")).toEqual(false);
+		});
+		it("toggleMenu should remove nav active class when turned off", () => {
+			toggleMenu();
+			toggleMenu();
+			expect(nav.classList.contains("active")).toEqual(false);
+		});
+		// it("toggleMenu should make the nav visibility:visible when it's already invisible", () => {
+		// 	toggleMenu();
+		// 	expect(getVisibilityStyle(nav)).toEqual("visible");
+		// });
+		// it("toggleMenu should make the nav visibility:hidden when it's already visible", () => {
+		// 	toggleMenu();
+		// 	toggleMenu();
+		// 	expect(getVisibilityStyle(nav)).toEqual("hidden");
+		// });
+		// it("toggleMenu should make the nav opacity:1 when it's already invisible", () => {
+		// 	toggleMenu();
+		// 	expect(getOpacityStyle(nav)).toEqual("1");
+		// });
+		// it("toggleMenu should make the nav opacity:0 when it's already visible", () => {
+		// 	toggleMenu();
+		// 	toggleMenu();
+		// 	expect(getOpacityStyle(nav)).toEqual("0");
+		// });
+		// it("toggleMenu should set transformation to none if already invisible", () => {
+		// 	toggleMenu();
+		// 	expect(getTransformStyle(nav)).toEqual("none");
+		// });
+		// it("toggleMenu should return translation to -100px if already visible", () => {
+		// 	toggleMenu();
+		// 	toggleMenu();
+		// 	expect(getTransformStyle(nav)).toEqual("matrix(1, 0, 0, 1, 0, -100)");
+		// });
+		// it("toggleMenu should rotate button when turned on", () => {
+		// 	toggleMenu();
+		// 	expect(getTransformStyle(button)).toEqual("matrix(0, 0.9, -0.9, 0, 0, 0)");
+		// });
+		// it("toggleMenu should rotate button back when turned off", () => {
+		// 	toggleMenu();
+		// 	toggleMenu();
+		// 	expect(getTransformStyle(button)).toEqual("matrix(0.9, 0, 0, 0.9, 0, 0)");
+		// });
 	});
 });

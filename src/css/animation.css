@@ -2,6 +2,24 @@ header {
 	transition-duration: 0.4s;
 }
 
+header nav {
+	transition-duration: inherit;
+}
+
+header nav.active {
+	visibility: visible;
+	opacity: 1;
+	transform: none;
+}
+
+header button.active {
+	transform: rotateZ(-90deg) scale(0.9);
+}
+
+header button {
+	transition-duration: inherit;
+}
+
 article.project {
 	perspective: 100vw;
 }
