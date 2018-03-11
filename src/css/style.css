@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 article.project {
-	background-image:url(./resources/steel-background.jpg);
+	background-image:url(../images/steel-background.jpg);
 	background-size:100% 100%;
 	/*background: linear-gradient(106deg, rgb(132, 134, 131) 0%, rgb(133, 137, 136) 86%);*/
 	border-radius:var(--radius);

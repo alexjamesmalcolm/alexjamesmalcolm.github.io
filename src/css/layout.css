@@ -19,6 +19,10 @@ header {
 	align-items: center;
 }
 
+header button {
+	display: none;
+}
+
 header nav ul {
 	display: flex;
 	justify-content: space-between;
@@ -204,6 +208,14 @@ section#contact div.content > * {
 }
 
 @media screen and (max-width: 425px){
+	header {
+		flex-direction: row;
+	}
+
+	header button {
+		display: block;
+	}
+
 	header nav {
 		display: none;
 	}
