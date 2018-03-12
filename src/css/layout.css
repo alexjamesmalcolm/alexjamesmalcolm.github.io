@@ -35,8 +35,10 @@ header nav ul li {
 
 section#projects {
 	display: flex;
-	flex-direction: column;
+	/*flex-direction: column;*/
 	align-items: center;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 div.projects {
@@ -143,6 +145,13 @@ section#about-me div.contents > * {
 
 section#projects h2 {
 	margin-bottom: 2rem;
+	flex-basis: 100%;
+	text-align: center;
+}
+
+section#projects button {
+	display: none;
+	margin: auto;
 }
 
 section#contact {
@@ -198,6 +207,14 @@ canvas {
 
 	section#about-me div.contents > * {
 		margin: 0;
+	}
+
+	section#projects {
+		grid-row: 2 / span 1;
+	}
+
+	section#projects button {
+		display: block;
 	}
 }
 

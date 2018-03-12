@@ -18,6 +18,14 @@ function initialize() {
 			toggleProjectFlip(project);
 		});
 	}
+	const nextCarouselButton = document.body.querySelector("button.next");
+	nextCarouselButton.addEventListener("click", () => {
+		nextCarousel();
+	});
+	const previousCarouselButton = document.body.querySelector("button.previous");
+	previousCarouselButton.addEventListener("click", () => {
+		previousCarousel();
+	});
 }
 
 function toggleMenu() {
@@ -65,6 +73,26 @@ function toggleProjectFlip(project) {
 		}
 		project.classList.add("active");
 	}
+}
+
+function nextCarousel() {
+	const currentProject = document.body.querySelector("article.project.current");
+	let nextProject = currentProject.nextElementSibling;
+	if(!nextProject) {
+		nextProject = currentProject.parentElement.firstElementChild;
+	}
+	currentProject.classList.remove("current");
+	nextProject.classList.add("current");
+}
+
+function previousCarousel() {
+	const currentProject = document.body.querySelector("article.project.current");
+	let previousProject = currentProject.previousElementSibling;
+	if(!previousProject) {
+		previousProject = currentProject.parentElement.lastElementChild;
+	}
+	currentProject.classList.remove("current");
+	previousProject.classList.add("current");
 }
 
 const getTransitionDuration = (element) => {

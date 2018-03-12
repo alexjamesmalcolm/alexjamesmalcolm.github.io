@@ -121,3 +121,13 @@ article.project:hover div.back, article.project.active div.back {
 article.project > * {
 	backface-visibility: hidden;
 }
+
+@media screen and (max-width: 800px) {
+	div.projects article.project {
+		display: none;
+	}
+
+	div.projects article.project.current {
+		display: block;
+	}
+}

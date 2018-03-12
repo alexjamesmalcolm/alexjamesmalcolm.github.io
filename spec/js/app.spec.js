@@ -2,6 +2,8 @@ describe("alexjamesmalcolm.github.io", () => {
 	
 	const container = document.createElement("div");
 	const modalContainer = document.createElement("div");
+
+	let project, anotherProject;
 	
 	beforeEach(() => {
 		container.classList.add("container");
@@ -28,8 +30,14 @@ describe("alexjamesmalcolm.github.io", () => {
 				<img class="headshot"/>
 			</div>
 		</section>
-		<article class="project"></article>
-		<article class="project"></article>
+		<section id="projects">
+			<button class="previous"></button>
+			<div class="projects">
+				<article class="project"></article>
+				<article class="project"></article>
+			</div>
+			<button class="next"></button>
+		</section>
 		`;
 		modalContainer.classList.add("modal-container");
 		modalContainer.innerHTML = `
@@ -40,6 +48,9 @@ describe("alexjamesmalcolm.github.io", () => {
 		document.body.append(modalContainer);
 		document.body.append(container);
 		initialize();
+
+		project = document.body.querySelector("article.project");
+		anotherProject = document.body.querySelectorAll("article.project")[1];
 	});
 
 	afterEach(() => {
@@ -139,10 +150,8 @@ describe("alexjamesmalcolm.github.io", () => {
 		});
 	});
 	describe("toggleProjectFlip()", () => {
-		let project, toggleProjectFlipSpy, anotherProject;
+		let toggleProjectFlipSpy;
 		beforeEach(() => {
-			project = document.body.querySelector("article.project");
-			anotherProject = document.body.querySelectorAll("article.project")[1];
 			toggleProjectFlipSpy = spyOn(window, "toggleProjectFlip").and.callThrough();
 		});
 		it("toggleProjectFlip should be called when a project is clicked", () => {
@@ -165,4 +174,28 @@ describe("alexjamesmalcolm.github.io", () => {
 			expect(anotherProject.classList.contains("active")).toEqual(true);
 		});
 	});
+	describe("nextCarousel", () => {
+		let button, nextCarouselSpy;
+		beforeEach(() => {
+			button = document.body.querySelector("button.next");
+			nextCarouselSpy = spyOn(window, "nextCarousel").and.callThrough();
+		});
+		it("clicking button calls nextCarousel", () => {
+			button.click();
+			expect(nextCarouselSpy).toHaveBeenCalled();
+		});
+		it("when project is current then clicking should make anotherProject current", () => {
+			project.classList.add("current");
+			button.click();
+			expect(project.classList.contains("current")).toEqual(false);
+			expect(anotherProject.classList.contains("current")).toEqual(true);
+		});
+		it("When anotherProject is current then clicking should loop back around and make project current", () => {
+			anotherProject.classList.add("current");
+			button.click();
+			expect(project.classList.contains("current")).toEqual(true);
+			expect(anotherProject.classList.contains("current")).toEqual(false);
+		});
+	});
+	describe("previousCarousel", () => {});
 });
