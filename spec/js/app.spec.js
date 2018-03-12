@@ -28,6 +28,8 @@ describe("alexjamesmalcolm.github.io", () => {
 				<img class="headshot"/>
 			</div>
 		</section>
+		<article class="project"></article>
+		<article class="project"></article>
 		`;
 		modalContainer.classList.add("modal-container");
 		modalContainer.innerHTML = `
@@ -134,6 +136,33 @@ describe("alexjamesmalcolm.github.io", () => {
 			toggleModal();
 			toggleModal();
 			expect(displayMandelbrotSpy).toHaveBeenCalledTimes(1);
+		});
+	});
+	describe("toggleProjectFlip()", () => {
+		let project, toggleProjectFlipSpy, anotherProject;
+		beforeEach(() => {
+			project = document.body.querySelector("article.project");
+			anotherProject = document.body.querySelectorAll("article.project")[1];
+			toggleProjectFlipSpy = spyOn(window, "toggleProjectFlip").and.callThrough();
+		});
+		it("toggleProjectFlip should be called when a project is clicked", () => {
+			project.click();
+			expect(toggleProjectFlipSpy).toHaveBeenCalledWith(project);
+		});
+		it("toggleProjectFlip should give active class to project", () => {
+			toggleProjectFlip(project);
+			expect(project.classList.contains("active")).toEqual(true);
+		});
+		it("toggleProjectFlip should remove active class to project", () => {
+			toggleProjectFlip(project);
+			toggleProjectFlip(project);
+			expect(project.classList.contains("active")).toEqual(false);
+		});
+		it("toggleProjectFlip should remove the active class from all other projects when adding the active class to a project", () => {
+			toggleProjectFlip(project);
+			toggleProjectFlip(anotherProject);
+			expect(project.classList.contains("active")).toEqual(false);
+			expect(anotherProject.classList.contains("active")).toEqual(true);
 		});
 	});
 });

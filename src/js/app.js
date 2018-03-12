@@ -11,6 +11,13 @@ function initialize() {
 	modal.addEventListener("click", () => {
 		toggleModal();
 	});
+	const projects = document.body.querySelectorAll("article.project");
+	for (let i = 0; i < projects.length; i++) {
+		let project = projects[i];
+		project.addEventListener("click", () => {
+			toggleProjectFlip(project);
+		});
+	}
 }
 
 function toggleMenu() {
@@ -42,6 +49,21 @@ function toggleModal() {
 	} else {
 		classList.add("active");
 		displayMandelbrot();
+	}
+}
+
+function toggleProjectFlip(project) {
+	if(project.classList.contains("active")) {
+		project.classList.remove("active");
+	} else {
+		const projects = document.body.querySelectorAll("article.project");
+		for (var i = 0; i < projects.length; i++) {
+			const pjct = projects[i];
+			if(pjct.classList.contains("active")) {
+				pjct.classList.remove("active");
+			}
+		}
+		project.classList.add("active");
 	}
 }
 

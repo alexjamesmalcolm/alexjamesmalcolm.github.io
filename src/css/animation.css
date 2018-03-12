@@ -1,3 +1,7 @@
+:root {
+	--modal-transition-duration: 1s;
+}
+
 div.modal-container {
 	position: fixed;
 	display: flex;
@@ -7,10 +11,14 @@ div.modal-container {
 	visibility: hidden;
 	align-items: center;
 	z-index: 1;
+	background-color: rgba(255, 255, 255, 0.93);
+	opacity: 0;
+	transition-duration: var(--modal-transition-duration);
 }
 
 div.modal-container.active {
 	visibility: visible;
+	opacity: 1;
 }
 
 div.modal-container.active div.modal div.modal canvas {
@@ -18,7 +26,7 @@ div.modal-container.active div.modal div.modal canvas {
 }
 
 div.modal {
-	transition-duration: 2s;
+	transition-duration: var(--modal-transition-duration);
 	width: 8rem;
 	text-align: center;
 	border-radius: 50%;
@@ -26,17 +34,41 @@ div.modal {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
+	position: relative;
 }
 
 div.modal-container.active div.modal {
 	visibility: visible;
-	width: 100vw;
-	background-color: rgba(255, 255, 255, 0.93);
+	width: 90vw;
+	height: 90vw;
 	border-radius: 0%;
 	opacity: 1;
-	height: 100vh;
 }
 
+div.modal p {
+	position: absolute;
+	top: 53%;
+	color: white;
+	width: 43%;
+	text-align: center;
+}
+
+div.modal img {
+	position: absolute;
+	left: 41.2%;
+	top: 24.5%;
+	width: 17.6%;
+	border-radius: 50%;
+	transition-delay: var(--modal-transition-duration);
+	transition-duration: 1s;
+	transition-property: opacity;
+	opacity: 0;
+}
+
+div.modal-container.active div.modal img {
+	opacity: 1;
+}
 
 header {
 	transition-duration: 0.4s;
@@ -78,11 +110,11 @@ article.project div.side {
 	transition-timing-function: ease-in-out;
 }
 
-article.project:hover div.front {
+article.project:hover div.front, article.project.active div.front {
 	transform: rotateY(-180deg);
 }
 
-article.project:hover div.back {
+article.project:hover div.back, article.project.active div.back {
 	transform: rotateY(0deg);
 }
 
