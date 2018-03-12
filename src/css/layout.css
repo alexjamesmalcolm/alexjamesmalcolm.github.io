@@ -161,10 +161,6 @@ section#contact div.content > * {
 	margin: 1rem;
 }
 
-div.modal {
-	display: relative;
-}
-
 canvas {
 	width: 100%;
 }
