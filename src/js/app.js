@@ -3,24 +3,15 @@ function initialize() {
 	button.addEventListener("click", () => {
 		toggleMenu();
 	});
+	const headshot = document.body.querySelector("img.headshot");
+	headshot.addEventListener("click", () => {
+		toggleModal();
+	});
+	const modal = document.body.querySelector("div.modal");
+	modal.addEventListener("click", () => {
+		toggleModal();
+	});
 }
-
-// function toggleMenu() {
-// 	const nav = document.body.querySelector(".container header nav");
-// 	const button = document.body.querySelector(".container header button");
-// 	const visibilityStyle = getVisibilityStyle(nav);
-// 	if(visibilityStyle == "visible") {
-// 		nav.style.visibility = "hidden";
-// 		nav.style.opacity = "0";
-// 		nav.style.transform = "matrix(1, 0, 0, 1, 0, -100)";
-// 		button.style.transform = "matrix(0.9, 0, 0, 0.9, 0, 0)";
-// 	} else {
-// 		nav.style.visibility = "visible";
-// 		nav.style.opacity = "1";
-// 		nav.style.transform = "none";
-// 		button.style.transform = "matrix(0, 0.9, -0.9, 0, 0, 0)";
-// 	}
-// }
 
 function toggleMenu() {
 	const button = document.body.querySelector(".container header button");
@@ -36,6 +27,27 @@ function toggleMenu() {
 		nav.classList.add("active");
 	}
 }
+
+function toggleModal() {
+	const modalContainer = document.body.querySelector("div.modal-container");
+	const classList = modalContainer.classList;
+	const containsActiveClass = classList.contains("active");
+	const modal = modalContainer.querySelector("div.modal");
+	if(containsActiveClass) {
+		classList.remove("active");
+		const duration = getTransitionDuration(modal);
+		setTimeout(() => {
+			clearCanvas();
+		}, parseInt(duration) * 1000);
+	} else {
+		classList.add("active");
+		displayMandelbrot();
+	}
+}
+
+const getTransitionDuration = (element) => {
+	return window.getComputedStyle(element, null).getPropertyValue("transition-duration");
+};
 
 const getVisibilityStyle = (element) => {
 	return window.getComputedStyle(element, null).getPropertyValue("visibility");

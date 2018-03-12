@@ -1,6 +1,7 @@
 describe("alexjamesmalcolm.github.io", () => {
 	
-	let container = document.createElement("div");
+	const container = document.createElement("div");
+	const modalContainer = document.createElement("div");
 	
 	beforeEach(() => {
 		container.classList.add("container");
@@ -22,13 +23,26 @@ describe("alexjamesmalcolm.github.io", () => {
 				<ul></ul>
 			</nav>
 		</header>
+		<section id="about-me">
+			<div class="contents">
+				<img class="headshot"/>
+			</div>
+		</section>
 		`;
+		modalContainer.classList.add("modal-container");
+		modalContainer.innerHTML = `
+		<div class="modal">
+			<canvas id="canvas"></canvas>
+		</div>
+		`;
+		document.body.append(modalContainer);
 		document.body.append(container);
 		initialize();
 	});
 
 	afterEach(() => {
 		container.remove();
+		modalContainer.remove();
 	});
 
 	describe("toggleMenu()", () => {
@@ -72,6 +86,54 @@ describe("alexjamesmalcolm.github.io", () => {
 			toggleMenu();
 			toggleMenu();
 			expect(nav.classList.contains("active")).toEqual(false);
+		});
+	});
+	describe("toggleModal()", () => {
+		let headshot, toggleModalSpy, displayMandelbrotSpy, clearCanvasSpy, modal;
+		beforeEach(() => {
+			headshot = document.body.querySelector("img.headshot");
+			toggleModalSpy = spyOn(window, "toggleModal").and.callThrough();
+			displayMandelbrotSpy = spyOn(window, "displayMandelbrot");
+			clearCanvasSpy = spyOn(window, "clearCanvas");
+			if(modalContainer.classList.contains("active")) {
+				modalContainer.classList.remove("active");
+			}
+			modal = document.body.querySelector("div.modal");
+		});
+		it("Clicking my face should make the modal appear", () => {
+			headshot.click();
+			expect(toggleModalSpy).toHaveBeenCalled();
+		});
+		it("toggleModal should make the div.modal have the active class", () => {
+			toggleModal();
+			expect(modalContainer.classList.contains("active")).toEqual(true);
+		});
+		it("toggleModal should remove the active class from div.modal if it already has it", () => {
+			toggleModal();
+			toggleModal();
+			expect(modalContainer.classList.contains("active")).toEqual(false);
+		});
+		it("toggleModal should call displayMandelbrot", () => {
+			toggleModal();
+			expect(displayMandelbrotSpy).toHaveBeenCalledTimes(1);
+		});
+		it("toggleModal twice should call clearCanvas", () => {
+			toggleModal();
+			toggleModal();
+			expect(clearCanvasSpy).toHaveBeenCalledTimes(1);
+		});
+		it("toggleModal once should not call clearCanvas", () => {
+			toggleModal();
+			expect(clearCanvasSpy).toHaveBeenCalledTimes(0);
+		});
+		it("toggleModal should be called by clicking on the modal", () => {
+			modal.click();
+			expect(toggleModalSpy).toHaveBeenCalled();
+		});
+		it("displayMandelbrot should be called once for every two toggleModal calls", () => {
+			toggleModal();
+			toggleModal();
+			expect(displayMandelbrotSpy).toHaveBeenCalledTimes(1);
 		});
 	});
 });

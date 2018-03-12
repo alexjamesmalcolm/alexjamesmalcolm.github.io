@@ -161,6 +161,15 @@ section#contact div.content > * {
 	margin: 1rem;
 }
 
+div.modal {
+	display: relative;
+}
+
+canvas {
+	display: absolute;
+	width: 100%;
+}
+
 @media screen and (max-width: 1060px){
 	section#projects div.projects {
 		grid-template-columns: repeat(2, 1fr);
