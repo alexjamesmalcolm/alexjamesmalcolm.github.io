@@ -83,3 +83,7 @@ div.side h3 a:visited {
 div.side h3 a:active {
 	color: #979797;
 }
+
+canvas {
+	image-rendering: pixelated;
+}
