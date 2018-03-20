@@ -83,7 +83,7 @@ article.project div.back {
 	padding:var(--back-side-padding);
 }
 
-article.project img {
+article.project div.front img {
 	width:100%;
 	max-height:16rem;
 	object-fit:fill;
