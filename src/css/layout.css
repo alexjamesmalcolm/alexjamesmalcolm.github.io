@@ -137,6 +137,7 @@ section#about-me div.contents {
 	width: 50%;
 	justify-content: space-between;
 	align-items: center;
+	height: min-content;
 }
 
 section#about-me div.contents > * {
