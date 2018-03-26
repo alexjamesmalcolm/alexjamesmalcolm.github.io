@@ -35,8 +35,6 @@ header nav ul li {
 
 section#projects {
 	display: flex;
-	/*flex-direction: column;*/
-	align-items: center;
 	flex-wrap: wrap;
 	justify-content: center;
 }
@@ -124,7 +122,6 @@ img.headshot {
 section#about-me {
 	display: flex;
 	flex-direction: column;
-	flex-wrap: wrap;
 	align-items: center;
 }
 
@@ -135,7 +132,6 @@ section#about-me h2 {
 section#about-me div.contents {
 	display: flex;
 	width: 50%;
-	justify-content: space-between;
 	align-items: center;
 	height: min-content;
 }
@@ -159,7 +155,6 @@ section#contact {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: space-between;
 }
 
 section#contact div.content {
@@ -178,7 +173,7 @@ canvas {
 @media screen and (max-width: 1060px){
 	section#projects div.projects {
 		grid-template-columns: repeat(2, 1fr);
-		width: 75%;
+		width: 70%;
 	}
 }
 
