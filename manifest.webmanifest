@@ -3,5 +3,12 @@
 	"short_name": "Alex M",
 	"start_url": "alexjamesmalcolm.com",
 	"background_color": "white",
-	"theme_color": "white"
+	"theme_color": "white",
+	"icons": [
+		{
+		"src": "src/images/suitcase.png",
+		"type": "image/png",
+		"sizes": "512x512"
+		}
+	]
 }
