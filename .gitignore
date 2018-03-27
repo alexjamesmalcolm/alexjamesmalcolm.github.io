@@ -1,6 +1,5 @@
 lib
 SpecRunner.html
-MIT.LICENSE
 node_modules
 package-lock.json
 postcss.config.js
