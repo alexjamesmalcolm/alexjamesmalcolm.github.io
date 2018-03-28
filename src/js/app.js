@@ -26,6 +26,7 @@ function initialize() {
 	previousCarouselButton.addEventListener("click", () => {
 		previousCarousel();
 	});
+	minimizeWrapping();
 }
 
 function toggleMenu() {
