@@ -222,6 +222,10 @@ canvas {
 	div.projects {
 		width: 90%;
 	}
+
+	article.project {
+		height: 15rem;
+	}
 }
 
 @media screen and (max-width: 425px){
@@ -250,6 +254,10 @@ canvas {
 	section#about-me div.contents img.headshot {
 		width: 100%;
 		border-radius: 3%;
+	}
+
+	article.project {
+		height: 18rem;
 	}
 }
 
