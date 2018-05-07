@@ -79,6 +79,8 @@ article.project div.back {
 	width:calc(100% - 2 * var(--back-side-padding));
 	height:calc(100% - 2 * var(--back-side-padding));
 	padding:var(--back-side-padding);
+	display: grid;
+	grid-template-rows: min-content min-content auto;
 }
 
 article.project div.front img {
@@ -105,11 +107,6 @@ div#background {
 	height:100vh;
 	z-index:-1;
 	top:0;
-}
-
-div.tags {
-	position:absolute;
-	bottom:var(--back-side-padding);
 }
 
 img.headshot {
