@@ -85,3 +85,11 @@ header hr {
 .location-name, .address {
     display: inline;
 }
+
+.work h2 {
+    margin-bottom: 0;
+}
+
+.volunteer h2 {
+    margin-bottom: 0;
+}
