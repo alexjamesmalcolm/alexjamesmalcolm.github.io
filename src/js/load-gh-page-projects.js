@@ -9,9 +9,10 @@ function htmlToElement(html) {
   return template.content.firstChild;
 }
 
-fetch("https://api.github.com/users/alexjamesmalcolm/repos")
+fetch("https://api.github.com/users/alexjamesmalcolm/repos?per_page=100")
   .then(response => response.json())
   .then(repos => repos.filter(repo => repo.homepage))
+  .then(repos => repos.filter(repo => !repo.fork))
   .then(repos =>
     repos.forEach(async repo => {
       const imageUrl = `https://source.unsplash.com/random/?programming,code,${repo.name}`;
