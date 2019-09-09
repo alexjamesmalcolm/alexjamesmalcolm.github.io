@@ -36,7 +36,7 @@ fetch("https://api.github.com/users/alexjamesmalcolm/repos?per_page=100")
           </a>
         </h3>
         <p>
-          ${repo.description}
+          ${repo.description ? repo.description : ""}
         </p>
         <div class="tags">
           <ul class="tags">
