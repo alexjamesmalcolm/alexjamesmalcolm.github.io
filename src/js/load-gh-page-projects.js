@@ -27,7 +27,7 @@ fetch("https://api.github.com/users/alexjamesmalcolm/repos?per_page=100")
         .then(obj => obj.content)
         .then(atob);
       const readMeTitles = readMe.match(/(?<=# ).*/gm);
-      const readMeImages = readMe.match(/(?<=!\[.*\]\()[^ ]*/gm);
+      const readMeImages = readMe.match(/(?<=!\[.*\]\()[^ (){}]*/gm);
       const title = readMeTitles ? readMeTitles[0] : repo.name;
       projectsElement.appendChild(
         htmlToElement(`<article class="project">
