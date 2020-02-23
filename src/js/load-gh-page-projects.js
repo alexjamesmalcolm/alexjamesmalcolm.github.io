@@ -31,16 +31,10 @@ fetch("https://api.github.com/users/alexjamesmalcolm/repos?per_page=100")
       const title = readMeTitles ? readMeTitles[0] : repo.name;
       projectsElement.appendChild(
         htmlToElement(`<article class="project">
-      <div class="front side">
-        <img alt="${title}" src="${
+        <blur-img class="image" alt="${title}" src="${
           readMeImages ? readMeImages[0] : imageUrl
-        }" />
-        <h3>
-          <a href="${repo.homepage}">${title}</a>
-        </h3>
-      </div>
-      <div class="back side">
-        <h3>
+        }"></blur-img>
+        <h3 class="title">
           <a href="${repo.homepage}">${title}</a>
         </h3>
         <p>

@@ -1,319 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<title>Alex Malcolm's Portfolio</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-	<link rel="stylesheet" type="text/css" href="src/css/style.css"/>
-	<link rel="stylesheet" type="text/css" href="src/css/layout.css"/>
-	<link rel="stylesheet" type="text/css" href="src/css/animation.css"/>
-	<link rel="shortcut icon" href="./src/images/favicon.ico" type="image/x-icon"/>
-	<link rel="icon" href="./src/images/favicon.ico" type="image/x-icon"/>
-	<link rel="manifest" href="/manifest.webmanifest"/>
-	<meta name="Description" content="Portfolio of the work of Alex Malcolm"/>
-	<meta name="theme-color" content="white"/>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122448762-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'UA-122448762-1');
-	</script>
-</head>
-<body onload="initialize()">
-	<div class="modal-container">
-		<div class="modal">
-			<img src="./src/images/square-alex.jpg"/>
-			<p>
-				Isn't this mandelbrot set cool looking?
-			</p>
-			<canvas width="600" height="600" id="canvas"></canvas>
-		</div>
-	</div>
-	<div class="container">
-		<header>
-			<h1>
-				<a href="">
-					Alex Malcolm
-				</a>
-			</h1>
-			<button aria-label="Menu button">
-				<img alt="Menu button" src="./src/images/hamburger.svg"/>
-			</button>
-			<nav>
-				<ul>
-					<li>
-						<a href="#about-me">About Me</a>
-					</li>
-					<li>
-						<a href="#projects">Projects</a>
-					</li>
-					<li>
-						<a href="#contact">Contact</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
-		<section id="about-me" >
-			<h2>
-				About Me
-			</h2>
-			<div class="contents">
-				<img src="./src/images/alex.webp" alt="Alex Malcolm" class="headshot" onerror="this.onerror=null;this.src='./src/images/alex.jpg';">
-				<p>
-					<span class="important">Software Development Apprentice at We Can Code IT with 7 years of experience in computer programming with a focus on JavaScript.</span><span class="unimportant"> 1-2 years of experience with hobbyist electronics engineering. Enthusiastic about building software solutions for automation. Strong conceptual ability to take requirements-related insights and convert it to a technology idea.</span>
-				</p>
-			</div>
-		</section>
-		<section id="projects" >
-			<h2>
-				Projects
-			</h2>
-			<button class="previous">Previous</button>
-			<div class="projects">
-				<article class="project current">
-					<div class="front side">
-						<img alt="Pantry+" data-src="./src/images/broad-street.png"/>
-						<h3>
-							<a href="https://github.com/NAPOSCA/pantryplus">
-								Pantry+
-							</a>
-						</h3>
-					</div>
-					<div class="back side">
-						<h3>
-							<a href="https://github.com/NAPOSCA/pantryplus">
-								Pantry+
-							</a>
-						</h3>
-						<p>
-							A curbside service made for the <a href="http://bspc.org/foodpantry/">Broad Street Food Pantry</a> to increase the rate of pantry-goers they could serve.
-						</p>
-						<div class="tags">
-							<ul class="tags">
-								<li class="tag">Java</li>
-								<li class="tag">Test-Driven Development</li>
-								<li class="tag">HTML5</li>
-								<li class="tag">CSS3</li>
-								<li class="tag">JavaScript</li>
-								<li class="tag">Continuous Integration</li>
-								<li class="tag">Heroku Deployment</li>
-								<li class="tag">Spring Framework</li>
-							</ul>
-						</div>
-					</div>
-				</article>
-				<article class="project">
-					<div class="front side">
-						<img alt="No Fun Messaging" data-src="./src/images/no-fun-messaging.png" />
-						<h3>
-							<a href="http://no-fun-messaging.alexjamesmalcolm.com">
-								No Fun Messaging
-							</a>
-						</h3>
-					</div>
-					<div class="back side">
-						<h3>
-							<a href="http://no-fun-messaging.alexjamesmalcolm.com">
-								No Fun Messaging
-							</a>
-						</h3>
-						<p>
-							A messaging service I made to teach myself to use Spring Security and Postgres.
-							I ended up accidentally learning Vue.js along the way to handle AJAX requests.
-							Feel free to say hello!
-						</p>
-						<div class="tags">
-							<ul class="tags">
-								<li class="tag">Java</li>
-								<li class="tag">HTML5</li>
-								<li class="tag">CSS3</li>
-								<li class="tag">JavaScript</li>
-								<li class="tag">Vue.js</li>
-								<li class="tag">Spring Framework 5</li>
-								<li class="tag">JUnit</li>
-								<li class="tag">Heroku</li>
-								<li class="tag">Travis CI</li>
-								<li class="tag">AJAX</li>
-							</ul>
-						</div>
-					</div>
-				</article>
-				<article class="project">
-					<div class="front side">
-						<img alt="Review Site" data-src="./src/images/review-site.png" />
-						<h3>
-							<a href="http://reviews.alexjamesmalcolm.com">
-								Review Site
-							</a>
-						</h3>
-					</div>
-					<div class="back side">
-						<h3>
-							<a href="http://reviews.alexjamesmalcolm.com">
-								Review Site
-							</a>
-						</h3>
-						<p>
-							A faux review website made utilizing the Java Spring stack running in an embedded Tomcat server.
-						</p>
-						<div class="tags">
-							<ul class="tags">
-								<li class="tag">Java</li>
-								<li class="tag">HTML5</li>
-								<li class="tag">CSS3</li>
-								<li class="tag">JavaScript</li>
-								<li class="tag">Eclipse</li>
-								<li class="tag">Spring</li>
-								<li class="tag">Test-Driven Development</li>
-								<li class="tag">JUnit</li>
-								<li class="tag">Heroku</li>
-								<li class="tag">Travis CI</li>
-								<li class="tag">AJAX</li>
-							</ul>
-						</div>
-					</div>
-				</article>
-				<article class="project">
-					<div class="front side">
-						<img alt="Virtual Pets Class Diagram" data-src="./src/images/virtual-pets.svg" />
-						<h3>
-							<a href="http://pets.alexjamesmalcolm.com">
-								Virtual Pets
-							</a>
-						</h3>
-					</div>
-					<div class="back side">
-						<h3>
-							<a href="http://pets.alexjamesmalcolm.com">
-								Virtual Pets
-							</a>
-						</h3>
-						<p>
-							A virtual pet shelter housing robotic and organic cats and dogs utilizing the Java Spring stack running in an embedded Tomcat server.
-						</p>
-						<div class="tags">
-							<ul class="tags">
-								<li class="tag">Java</li>
-								<li class="tag">HTML5</li>
-								<li class="tag">Eclipse</li>
-								<li class="tag">Spring</li>
-								<li class="tag">Test-Driven Development</li>
-								<li class="tag">JUnit</li>
-							</ul>
-						</div>
-					</div>
-				</article>
-				<article class="project">
-					<div class="front side">
-						<img alt="Money" data-src="./src/images/bank-teller.jpg" />
-						<h3>
-							<a href="https://github.com/alexjamesmalcolm/bank-teller">
-								Bank Teller
-							</a>
-						</h3>
-					</div>
-					<div class="back side">
-						<h3>
-							<a href="https://github.com/alexjamesmalcolm/bank-teller">
-								Bank Teller
-							</a>
-						</h3>
-						<p>
-							A simple ATM and bank account management app made using Eclipse as an introduction to JUnit and Test-Driven Development.
-						</p>
-						<div class="tags">
-							<ul class="tags">
-								<li class="tag">Java</li>
-								<li class="tag">Eclipse</li>
-								<li class="tag">JUnit</li>
-								<li class="tag">Test-Driven Development</li>
-							</ul>
-						</div>
-					</div>
-				</article>
-				<article class="project">
-					<div class="front side">
-						<img alt="Fortune Teller" data-src="./src/images/fortune-teller.jpg" />
-						<h3>
-							<a href="https://github.com/alexjamesmalcolm/fortune-teller">
-								Fortune Teller
-							</a>
-						</h3>
-					</div>
-					<div class="back side">
-						<h3>
-							<a href="https://github.com/alexjamesmalcolm/fortune-teller">
-								Fortune Teller
-							</a>
-						</h3>
-						<p>
-							A fortune telling program written using Eclipse made while I was first learning Java.
-						</p>
-						<div class="tags">
-							<ul class="tags">
-								<li class="tag">Java</li>
-								<li class="tag">Eclipse</li>
-							</ul>
-						</div>
-					</div>
-				</article>
-				<article class="project">
-					<div class="front side">
-						<img alt="Screeps Logo" data-src="./src/images/screeps.jpg" />
-						<h3>
-							<a href="https://github.com/alexjamesmalcolm/screeps">
-								Screeps
-							</a>
-						</h3>
-					</div>
-					<div class="back side">
-						<h3>
-							<a href="https://github.com/alexjamesmalcolm/screeps">
-								Screeps
-							</a>
-						</h3>
-						<p>
-							The AI behavior that controlled my scripted creeps made in 2017 to further the colony and survive in the MMORPG world of the game, Screeps.
-						</p>
-						<div class="tags">
-							<ul class="tags minimize-wrapping">
-								<li class="tag">JavaScript</li>
-								<li class="tag">GitHub</li>
-							</ul>
-						</div>
-					</div>
-				</article>
-			</div>
-			<button class="next">Next</button>
-		</section>
-		<section id="contact">
-			<h2>
-				Contact Me
-			</h2>
-			<div class="content">
-				<a href="https://www.linkedin.com/in/alexjamesmalcolm/">
-					<img alt="LinkedIn Logo" class="icon" data-src="./src/images/linkedin.svg" />
-					LinkedIn
-				</a>
-				<a href="https://github.com/alexjamesmalcolm">
-					<img alt="GitHub Logo" class="icon" data-src="./src/images/github.svg" />
-					GitHub
-				</a>
-				<a href="./resume.html">Résumé</a>
-			</div>
-		</section>
-		<footer>
-			<small>
-				Website by Alexander Malcolm
-			</small>
-		</footer>
-	</div>
-	<script type="text/javascript" src="./src/js/mandelbrot.js"></script>
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="https://cdn.rawgit.com/tuupola/jquery_lazyload/07d121f8dfa7c83c8a2bb0767f5c77eaf60be54e/lazyload.js"></script>
-	<script type="text/javascript" src="./src/js/lazyloadxt.js"></script>
-	<script type="text/javascript" src="./src/js/app.js"></script>
-	<script type="text/javascript" src="./src/js/load-gh-page-projects.js"></script>
-</body>
+  <head>
+    <title>Alex Malcolm's Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="src/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Voces&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="./src/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="./src/images/favicon.ico" type="image/x-icon" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="Description" content="Portfolio of the work of Alex Malcolm" />
+    <meta name="theme-color" content="white" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-122448762-1"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh//alexjamesmalcolm/blur-img/blur-img.js"
+      type="module"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-122448762-1");
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <section class="page">
+        <header>
+          <img class="headshot" src="./src/images/alex.jpg" />
+          <h1>Alex Malcolm</h1>
+          <hr />
+          <h2>Fullstack Developer</h2>
+        </header>
+        <section class="stacks">
+          <div class="row">
+            <img class="stack-logo" src="./src/images/stack-logos/java.svg" />
+            <h3>Java</h3>
+            <h3>|</h3>
+            <h3>Spring Boot</h3>
+            <img
+              class="stack-logo"
+              src="./src//images/stack-logos/spring-boot.svg"
+            />
+          </div>
+          <div class="row">
+            <img class="stack-logo" src="./src/images/stack-logos/python.svg" />
+            <h3>Python</h3>
+            <h3>|</h3>
+            <h3>Django</h3>
+            <img
+              class="stack-logo"
+              src="./src//images/stack-logos/django.svg"
+            />
+          </div>
+          <div class="row">
+            <img
+              class="stack-logo"
+              src="./src/images/stack-logos/javascript.svg"
+            />
+            <h3>JavaScript</h3>
+            <h3>|</h3>
+            <h3>React</h3>
+            <img class="stack-logo" src="./src//images/stack-logos/react.svg" />
+          </div>
+          <div class="row">
+            <img
+              class="stack-logo"
+              src="./src//images/stack-logos/github.svg"
+            />
+            <h3>GitHub</h3>
+            <a href="https://github.com/alexjamesmalcolm">/alexjamesmalcolm</a>
+          </div>
+          <div class="row">
+            <img
+              class="stack-logo"
+              src="./src//images/stack-logos/linkedin.svg"
+            />
+            <h3>LinkedIn</h3>
+            <a href="https://www.linkedin.com/in/alexjamesmalcolm/"
+              >/alexjamesmalcolm</a
+            >
+          </div>
+        </section>
+      </section>
+      <section class="page">
+        <section class="projects"></section>
+        <footer>
+          <small>Made by Alex Malcolm</small>
+        </footer>
+      </section>
+    </div>
+    <script src="./src/js/load-gh-page-projects.js"></script>
+  </body>
 </html>
